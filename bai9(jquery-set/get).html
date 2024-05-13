@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+           $('#btn1').click(function(){
+            $('#lb1').text('click here');
+            });
+
+        $('#btn2').click(function(){
+            alert($('#lb1').text());
+         });
+
+        $('#btn3').click(function(){
+            //alert($('#lb1').css('color','red'));
+            $('#lb1').attr('style','color: red' );
+            $('#txt1').val('123');
+            $('#lb1').text($('#txt1').val());
+         });
+       
+    });
+
+    $(document).ready(function(){
+        $('#btn2').click(function(){
+          $('#link1').attr('href','https://elearning.vanlanguni.edu.vn/');
+          $('#link1').addClass('style1');
+
+          alert($('#link').attr('href'));
+    });
+});
+    </script>
+</head>
+      
+<body>
+    <label id="lb1"></label>
+    <input type="text" name="" id="txt1">
+    <br>
+    <a id="btn1" href="#">click here</a>
+    <a id="btn2" href="#">get here</a>
+    <a id="btn3" href="#">change color</a>
+     <br>
+    <a href="#" id="link1">link</a>
+    <br>
+    <button id="btn2">click </button>
+</body>
+</html>

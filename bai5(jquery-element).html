@@ -1,0 +1,106 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                    
+                //đếm số  bảng 
+                    //alert($('table').length);
+                
+                //in ra đoạn html
+                    //alert($('table').html());
+                    
+                //lấy ra text có trong bảng ( thẻ td)
+                    //alert($('table').text());
+                    
+                //cho các thẻ a và div chuyển màu     
+                    //$('table, a,div').css('background-color','yellow');
+                    
+                    //$('#table1  tr:even').css('background-color','grey');
+                    
+                    //$('#table1  tr:odd').css('background-color','yellow');
+                    
+                    $('table tr').each(function(){
+                     if($(this).find('td:first').text()=='C#')
+                    alert($(this).html());
+
+                    // });
+
+
+                    //lấy tr cuối cùng
+                    //$('table tr:last').each(function(){
+                        //alert($(this).html());
+                    //});
+                
+                    $('ul li').each(function(){
+                        alert($(this).html());
+                    });
+                    
+            
+        });
+            //even (xét chẵn )
+            //odd (xét lẻ)
+        });
+        
+            
+            
+
+        </script>
+    </head>
+    <body>
+        <table id="table1" border="1">
+            <tr>
+                <td>C#</td>
+                <td>ASP.NEt</td>
+                <td>SQL Server</td>
+            </tr>
+            <tr>
+                <td>AJSAX</td>
+                <td>CSS</td>
+                <td>HTml</td>
+            </tr>
+            <tr>
+                <td>mot</td>
+                <td>hai</td>
+                <td>ba</td>
+            </tr>
+        
+
+        </table>
+        <br>
+        <table id="table2" border="1">
+            <tr>
+                <td>Mark</td>
+                <td>John</td>
+                <td>Joy</td>
+            </tr>
+            <tr>
+                <td>JOe</td>
+                <td>ROb</td>
+                <td>rachel</td>
+            </tr>
+            <tr>
+                <td>Todd</td>
+                <td>Tom</td>
+                <td>THeo</td>
+            </tr>
+        </table>
+        <ul id="ul1">
+            <li>select1</li>
+            <li>select2</li>
+            <li>select3</li>
+            <li>select4</li>
+        </ul>
+        <div>
+            <a href="https://pragimtech.com">PragimTech</a>
+        </div>
+        <br>
+        <div>
+            <a href="http://microsoft.com">Microsoft</a>
+        </div>
+    </body>
+    </html>

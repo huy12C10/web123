@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+    .my-border{
+        border: 1px solid red;
+    }
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            //$('[title]').addClass('my-border');
+
+
+            //$('span[title]').addClass('my-border')
+            
+           // $('[title="div1"],[title="div3"]').addClass('my-border');
+           $('.demo[title="div1"]').addClass('my-border');
+        });
+    </script>
+</head>
+<body>
+    <div class="demo" title="div1" style="background-color:yellow">
+        <span title="abc">
+            This is first
+        </span>
+
+    </div>
+    <div class="demo" title="div2">
+        <span>
+            This is second
+        </span>
+
+    </div>
+    <div class="demo" title="div1">
+        <span>
+            This is three
+        </span>
+
+    </div>
+    <div class="demo" title="div4">
+        <span>
+            This is four
+        </span>
+
+    </div>
+   
+</body>
+</html>

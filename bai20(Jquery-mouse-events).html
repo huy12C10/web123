@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+     <script>
+        $(document).ready(function(){
+               $('img[src="help.png"]').mouseover(function(){
+                var divTextIcon=$(this).attr('id').replace('img','div')
+                $('#' +divTextIcon).fadeIn('10000');
+               }).mouseout(function(){
+                var divTextIcon = $(this).attr('id').replace('img','div');
+                $('#' +divTextIcon).fadeOut('10000');
+               });;
+           
+        });
+
+   
+        
+     </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>First name</td>
+            <td>
+                <input type="text" name="" id="txtFirstName" class="inputRequired">
+            </td>
+            <td><img src="help.png" alt="" id="imgFirstHelp"></td>
+            <td><div id="divFirstHelp" style="display:none">Please enter your first name</div></td>
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td>
+                <input type="text" name="" id="txtLastName" class="inputRequired">
+            </td>
+            <td><img src="help.png" alt="" id="imgLastHelp"></td>
+            <td><div id="divLastHelp" style="display:none">Please enter your last name</div></td>
+        </tr>
+        <td>City</td>
+        <td>
+            <Select name="" id="ddlCity" class="InputRequired">
+                 <option value="Select">Select</option>
+                 <option value="New York">New York</option> 
+                 <option value="London">London</option>
+                 <option value="Chennai">Chennai</option>   
+                 <option value="Sydney">Sydney</option>
+            </select>
+            <td><img src="help.png" alt="" id="imgCityHelp"></td>
+            <td><div id="divCityHelp" style="display:none">Please enter your City</div></td>
+        </td>
+        <tr>
+            <td>Favorite color</td>
+            <td>
+                <input type="radio" value="Red" id="redioRed" name="color" class="inputRequired">Red
+                <input type="radio" id="radioGreen" name="color" value="Green" class="inputRequired">Green 
+                <input type="radio" id="radioBlue" name="color" value="Blue" class="inputRequired">Blue
+                
+            </td>
+            <td><img src="help.png" alt="" id="imgHelp"></td>
+            <td><div id="divHelp" style="display:none">Please enter your favorite color</div></td>
+        </tr>
+        <tr>
+            <td>Contact Method</td>
+            <td>
+                <input type="checkbox" id="chkBoxEmail" value="Email" class="inputRequired">Email
+                <input type="checkbox" id="chkBoxPhone" value="Phone" class="inputRequired">Phone
+                <input type="checkbox" id="chkBoxSocialMedia" value="SocialMedia" class="inputRequired">Social Media
+                
+
+            </td>
+            <td><img src="help.png" alt="" id="imgContactHelp"></td>
+            <td><div id="divContactHelp" style="display:none">Please enter your Contact Method</div></td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>
+                <textarea id="txtComments" class="inputRequired"></textarea>
+            </td>
+            <td><img src="help.png" alt="" id="imgCommentHelp"></td>
+            <td><div id="divCommentHelp" style="display:none">Please enter your comments</div></td>
+            <tr>
+                <td><input type="button" id="btnSubmit" value="Submit"></td>
+                <td><div id="divResult"></div></td>
+            </tr>
+            
+        </tr>
+
+    </table>
+</body>
+</html>

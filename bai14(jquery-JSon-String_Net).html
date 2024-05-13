@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var employeeJson =  [{
+                "firstName": "Huy",
+                "lastName": "Nguyen",
+                "birthDate": 22,
+                "email": "tuanhuy@gmail.com",
+            },
+            {
+                "firstName": "Hoai",
+                "lastName": "Pham",
+                "birthDate": 21,
+                "email": "hoai@gmail.com",
+            }];
+
+            // Hiển thị JSON dưới dạng chuỗi trong div có id là "result"
+            $('#result').text(JSON.stringify(employeeJson));
+
+            // Lấy nội dung chuỗi JSON từ div có id là "result"
+            var content = $('#result').text();
+
+            // Chuyển đổi chuỗi JSON thành đối tượng JavaScript
+            var objectJson = JSON.parse(content);
+
+            console.log(objectJson);
+        });
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+</html>

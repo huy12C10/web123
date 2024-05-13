@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+       $(document).ready(function(){
+         $('#btnSubmit').on('click', function(){
+            var rdochecked=$('input[type=radio]:checked');
+            if (rdochecked.length > 0) {
+                $('#divResult').text(rdochecked.length +' radio selected');
+            }
+            else{
+                $('#divResult').text('No radio selected');
+            }
+         });
+
+         $('#btnSubmit1').on('click', function(){
+            var rdochecked1=$('input[type=checkbox]:checked');
+            if (rdochecked1.length > 0) {
+                $('#divResult1').html(rdochecked1.val() +' radio selected <br>'  );
+
+                rdochecked1.each(function(){
+                    $('#divResult1').append($(this).val()+"<br>");
+                });
+            }
+            else{
+                $('#divResult1').text('No checked selected');
+            }
+         });
+       });
+    </script>
+</head>
+<body>
+     <label>
+        <input type="radio" name="gender" value="1">Male
+     </label>
+     
+     <label>
+     <input type="radio" name="gender" value="0">Female</label>
+
+     <br>
+    <br>
+    <input type="button" value="submit" id="btnSubmit">
+
+    <div id="divResult"></div>
+
+
+    <label>
+        <input type="checkbox"  value="C#">C#
+     </label>
+     
+     <label>
+        <input type="checkbox"  value="Java">java
+     </label>
+     <br>
+    <br>
+    <input type="button" value="submit" id="btnSubmit1">
+
+    <div id="divResult1"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // $('li').each(function(index,element){
+                //alert($(this).text());
+               // alert('index'+ index+".element" +$(element).text());
+           // if ($(this).text() == "China")
+           // {
+            //    return false;
+           // }
+            //    $(this).css('color', 'red');
+            
+          // });
+
+
+
+         //$('li').css('color', 'red');
+        var result="";
+         $('li').each(function(){
+           // $('#result').html($('#result').html()+'<br>'+ $(this).text());
+
+           result+=$(this).text() +'<br>';
+        });
+         $('#result').html(result);
+        });
+        //$('li').css('color', 'green');
+        //$('li').slideUp(1000);
+        //$('li').slideDown(1000);
+        //$('li').css('color','blue');
+
+        //$('li').css('color', 'green')
+        //.slideUp(1000)
+        //.slideDown(1000)
+        //.css('color','blue');
+        //});
+           
+
+
+
+      
+ 
+    
+    </script>
+</head>
+<body>
+    <ul>
+        <li>US</li>
+        <li>England</li>
+        <li>China</li>
+        <li>Russia</li>
+        <li>Thailan</li>
+        <li>VietNam</li>
+    </ul>
+
+    <br>
+    <div id="result"></div>
+</body>
+</html>

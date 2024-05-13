@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+                var employeeJson=  [{
+                    "firstName" :"Huy",
+                    "lastName" :"Nguyen",
+                    "birthDate" :22,
+                    "email" :"tuanhuy@gmail.com",
+                },
+                {
+                    "firstName" :"Hoai",
+                    "lastName" :"Pham",
+                    "birthDate" :21,
+                    "email" :"tuanhuy@gmail.com",
+                       
+                }];
+
+
+               // $("#result").html("firstName; "  + employeeJson.firstName + "   ; " + "lastName: " + employeeJson.lastName );
+
+             //  $("#result").html("firstName; "  + employeeJson[1].firstName + "   ; " + "lastName: " + employeeJson[0].lastName );
+              
+             var result='';
+             $.each($(employeeJson),function(i,item){
+                
+                result+= "firstName; "  + item.firstName + "   ; " + "lastName: " +item.lastName +'<br>';
+
+             });
+
+             $('#result').html(result);
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    
+</body>
+</html>
